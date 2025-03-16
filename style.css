@@ -1,0 +1,119 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+
+  --fc-primary: #34355b;
+  --bg-phrase: #e4edf1;
+
+  --bg-body: linear-gradient(45deg, #190361 0%, #bb00ff 100%);
+  --btn: #ff9500;
+}
+
+body {
+  background: var(--bg-body);
+  animation: gradient 10s ease infinite;
+  background-size: 200% 200%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  color: var(--fc-primary);
+  background-color: #fff;
+  text-align: center;
+  width: min(95%, 430px);
+  padding: 4.8rem 6.4rem;
+  box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.8);
+  border-radius: 5px;
+}
+
+h1,
+h2 {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 2.4rem;
+  line-height: 2.9rem;
+  margin: 0 auto;
+  margin-bottom: 2.4rem;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+p {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  margin: 1.4rem 0 2rem;
+}
+
+img {
+  margin: 0;
+}
+
+.hide {
+  display: none;
+}
+
+/* SCREEN 1 */
+.screen1 img {
+  cursor: pointer;
+}
+
+.screen1 img:hover {
+  -webkit-animation: vibrate-1 3s linear infinite both;
+  animation: vibrate-1 0.3s linear infinite both;
+}
+
+/* SCREEN 2 */
+.screen2 .fortuneMessage {
+  color: #000;
+  background-color: var(--bg-phrase);
+  font-family: "Dancing Script", cursive;
+  font-weight: 400;
+  font-size: 2.4rem;
+  box-shadow: 2px 2px 2px rgba(85, 85, 85, 0.5);
+  animation: teste 1.5s both;
+}
+
+.screen2 button {
+  font-family: "DM Sans", sans-serif;
+  font-weight: 400;
+  color: #fff;
+  background-color: var(--btn);
+  border-radius: 4px;
+  padding: 1.6rem;
+  border: none;
+  cursor: pointer;
+  transition: filter 300ms;
+}
+
+.screen2 button:hover {
+  filter: brightness(0.9);
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
